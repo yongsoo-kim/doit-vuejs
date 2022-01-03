@@ -7,10 +7,18 @@ Vue.component('child-component', {
   template: '<p>{{ propsdata }}</p>'
 });
 
+
+Vue.component('sibling-component',{
+  template: '<p>{{msg}}</p>',
+  props: ['msg']
+
+});
+
 var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello Vue! passed from Parent Component',
+    anotherMessage: 'Yongsoo?'
 
     // 할일 #2
     // data 속성을 1개 더 지정하고 (예: anotherMessage) 임의의 문자열을 값으로 대입해보세요.
